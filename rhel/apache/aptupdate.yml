@@ -6,4 +6,4 @@
   - name: Apt Update
     apt:
       name: apache2
-      state: latest
+      state: absent
