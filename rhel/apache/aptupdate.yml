@@ -1,0 +1,8 @@
+---
+- name: Update
+  hosts: all
+
+  tasks:
+  - name: Apt Update
+    apt:
+      name: update
