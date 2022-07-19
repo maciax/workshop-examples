@@ -1,9 +1,9 @@
 ---
-- name: Update
+- name: Install Apache
   hosts: all
 
   tasks:
-  - name: Apt Update
+  - name: Install apache2
     apt:
       name: apache2
       state: latest
