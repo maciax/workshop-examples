@@ -1,13 +1,23 @@
 ---
-- name: Install Apache
+- name: Uninstall Apache
   hosts: all
 
   tasks:
-  - name: Install apache2
+  - name: Uninstall apache2
     apt:
       name: apache2
       state: absent
-  - name: Remove unwanted Apache2 packages from the system.
-    apt:
-      autoremove: yes
       purge: yes
+      autoremove: yes
+  - name: Uninstall apache2-data 
+    apt:
+      name: apache2-data
+      state: absent
+      purge: yes
+      autoremove: yes
+  - name: Uninstall apache2-data 
+    apt:
+      name: apache2-utils
+      state: absent
+      purge: yes
+      autoremove: yes
